@@ -1,4 +1,4 @@
-# Powershell Stuff
+# Powershell Learning
 
 Documenting tips and tricks I learn as I do stuff in Powershell. This
 is intended to be a helpful "cheat sheet", not a comprehensive
@@ -17,7 +17,7 @@ do stuff. Heavy editing expected as I refine this material.
 
 | bash       | PowerShell | Notes/Comments |
 | :--------- | :--------- | :------- |
-| ... `| less` | `Out-Host -Paging` | Paginate output for happy scroll scroll
+| ... `\| less` | `Out-Host -Paging` | Paginate output for happy scroll scroll
 
 Note that many tasks that you may do via text-bending in bash you will
 accomplish using Powershell's objects.
