@@ -1,9 +1,12 @@
-# Powershell Learning
+ Powershell Learning
 
 Documenting tips and tricks I learn as I do stuff in Powershell. This
 is intended to be a helpful "cheat sheet", not a comprehensive
 reference. Sections here are written to quickly inform you on how to
 do stuff. Heavy editing expected as I refine this material.
+
+To find about the "core language" of PS 6, I recommend reading all of
+the `about_*` articles of the official docs.
 
 ## Bash and Powershell Equivalents
 
@@ -24,6 +27,12 @@ accomplish using Powershell's objects.
 
 ## One-liner Examples
 
+Check to make sure you are using Unicode (UTF-8) for output:
+
+```powershell
+$OutputEncoding # this is an example of a "preference variable"
+```
+
 Write a list of commands to a file:
 
 ```powershell
@@ -38,6 +47,13 @@ Get-Location | Get-Member # Find out what the methods of `Get-Location` are
 (Get-Location).ToString() # Using a method
 ```
 
+The next example comes from the official docs article [Objects in Pipelines](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_objects?view=powershell-6). This command outputs all the non-directory items under `C:`. Notice:
+
+- Underscore variable
+
+```powershell
+Get-ChildItem C: | where { $_.PsIsContainer -eq $false } | Format-List
+```
 
 ## Resources
 
