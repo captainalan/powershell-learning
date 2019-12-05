@@ -47,6 +47,12 @@ Get-Location | Get-Member # Find out what the methods of `Get-Location` are
 (Get-Location).ToString() # Using a method
 ```
 
+Set `vim` as an alias for `nvim` (neovim):
+
+```powershell
+Set-Alias -Name vim -Value nvim
+```
+
 The next example comes from the official docs article [Objects in Pipelines](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_objects?view=powershell-6). This command outputs all the non-directory items under `C:`. Notice:
 
 - Underscore variable
